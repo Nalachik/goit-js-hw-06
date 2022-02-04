@@ -1,20 +1,26 @@
-const textInputRef = document.querySelector("#name-input");
-const textOutputRef = document.querySelector("#name-output");
+const inputRef = document.querySelector("#name-input");
+const outputRef = document.querySelector("#name-output");
+// ========== Version 1 ================
+// inputRef.addEventListener("input", changeText);
+// function changeText(event) {
+//   inputRef.value !== ""
+// ? (outputRef.textContent = event.currentTarget.value)
+// : (outputRef.textContent = "Anonymous")
+// }
 
-textInputRef.addEventListener("input", (event) => {
-  textOutputRef.textContent = event.currentTarget.value;
-});
+// ============ VERSION 2 ================
+// inputRef.addEventListener("input", (event) => {
+// inputRef.value === ""
+// ? (outputRef.textContent = "Anonymous")
+// : (outputRef.textContent = event.currentTarget.value)
+//   });
 
-if (textInputRef.value === "") {
-    textOutputRef.textContent = "Anonymous";
+
+// =========== VERSION 3 ================
+inputRef.addEventListener("input", (event) => {
+
+  if (inputRef.value === "") {
+    outputRef.textContent = "Anonymous";
 }
-else 
-    textOutputRef.textContent = event.currentTarget.value;
-
-
-// Напиши скрипт который,
-//     при наборе текста в инпуте input#name - input(событие input),
-//     подставляет его текущее значение в
-//      span#name - output.
-//      Если инпут пустой,
-//     в спане должна отображаться строка "Anonymous".
+  else 
+    outputRef.textContent = event.currentTarget.value;});
