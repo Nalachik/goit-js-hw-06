@@ -1,4 +1,3 @@
-// ======== Variant 1 =======
 const btnPlusRef = document.querySelector('button[data-action="increment"]')
 const btnMinusRef = document.querySelector('button[data-action="decrement"]')
 const valueRef = document.querySelector('#value')
@@ -18,7 +17,6 @@ console.log(btnPlusRef)
 console.log(btnMinusRef)
 console.log(valueRef)
 
-// =========== Variant2==========
 
 // 1 - Спан +1-1
 // 4 - Добавь слушатели кликов на кнопки,
