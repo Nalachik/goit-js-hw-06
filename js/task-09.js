@@ -8,9 +8,10 @@ const buttonRef = document.querySelector('.change-color');
 
 buttonRef.addEventListener('click', onButtonColor);
 
-function onButtonColor (event){
-  document.body.style.backgroundColor = getRandomHexColor();
-  descriptionRef.textContent = `${getRandomHexColor()}`;
+function onButtonColor(event) {
+  const currentColor = getRandomHexColor();
+  document.body.style.backgroundColor = currentColor;
+  descriptionRef.textContent = currentColor;
  }
            //  ===== Variant 2 ===== 
 // const btnRef = document.querySelector('.change-color');
@@ -20,11 +21,9 @@ function onButtonColor (event){
 //   const changeColor = getRandomHexColor();
 //   textRef.textContent = changeColor;
 //   document.body.style.backgroundColor = changeColor;
-  
 // }
 // btnRef.addEventListener('click', ClickOnColorButton);
 
-// ПОЧЕМУ addEventListener в варианте 2 консоль потребовала вынести за область видимости???
 
              // ========   TASK   ===============
 // скрипт изменяет цвет фона элемента <body> через инлайн стиль при клике
